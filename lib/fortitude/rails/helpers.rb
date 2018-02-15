@@ -146,11 +146,18 @@ module Fortitude
         %w{time_zone_options_for_select collection_radio_buttons collection_check_boxes} +
 
         # And these can nest inside each other
-        %w{form_for fields_for form_with}
+        %w{form_for fields_for form_with errors_on form_group}
 
       helper :form_for, :transform => :output_return_value, :output_yielded_methods => FORM_FOR_YIELDED_METHODS_TO_OUTPUT
       helper :fields_for, :transform => :output_return_value, :output_yielded_methods => FORM_FOR_YIELDED_METHODS_TO_OUTPUT
       helper :form_with, :transform => :output_return_value, :output_yielded_methods => FORM_FOR_YIELDED_METHODS_TO_OUTPUT
+      
+      helper :bootstrap_form_with, :transform => :output_return_value, :output_yielded_methods => FORM_FOR_YIELDED_METHODS_TO_OUTPUT
+      helper :bootstrap_form_for, :transform => :output_return_value, :output_yielded_methods => FORM_FOR_YIELDED_METHODS_TO_OUTPUT
+      helper :bootstrap_fields_for, :transform => :output_return_value, :output_yielded_methods => FORM_FOR_YIELDED_METHODS_TO_OUTPUT
+      helper :bootstrap_form_tag, :transform => :output_return_value, :output_yielded_methods => FORM_FOR_YIELDED_METHODS_TO_OUTPUT
+      helper :form_group, :transform => :output_return_value, :output_yielded_methods => FORM_FOR_YIELDED_METHODS_TO_OUTPUT
+      helper :errors_on, :transform => :output_return_value
       
       # form_options_helper
       # helper :select, :transform => :output_return_value # conflicts with HTML <select> tag
