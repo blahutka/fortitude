@@ -150,7 +150,7 @@ module Fortitude
 
       helper :form_for, :transform => :output_return_value, :output_yielded_methods => FORM_FOR_YIELDED_METHODS_TO_OUTPUT
       helper :fields_for, :transform => :output_return_value, :output_yielded_methods => FORM_FOR_YIELDED_METHODS_TO_OUTPUT
-      helper :fields_with, :transform => :output_return_value, :output_yielded_methods => FORM_FOR_YIELDED_METHODS_TO_OUTPUT
+      helper :form_with, :transform => :output_return_value, :output_yielded_methods => FORM_FOR_YIELDED_METHODS_TO_OUTPUT
       
       # form_options_helper
       # helper :select, :transform => :output_return_value # conflicts with HTML <select> tag
