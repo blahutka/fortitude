@@ -146,11 +146,12 @@ module Fortitude
         %w{time_zone_options_for_select collection_radio_buttons collection_check_boxes} +
 
         # And these can nest inside each other
-        %w{form_for fields_for}
+        %w{form_for fields_for form_with}
 
       helper :form_for, :transform => :output_return_value, :output_yielded_methods => FORM_FOR_YIELDED_METHODS_TO_OUTPUT
       helper :fields_for, :transform => :output_return_value, :output_yielded_methods => FORM_FOR_YIELDED_METHODS_TO_OUTPUT
-
+      helper :fields_with, :transform => :output_return_value, :output_yielded_methods => FORM_FOR_YIELDED_METHODS_TO_OUTPUT
+      
       # form_options_helper
       # helper :select, :transform => :output_return_value # conflicts with HTML <select> tag
       helper :collection_select, :transform => :output_return_value
